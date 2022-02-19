@@ -1,7 +1,4 @@
 import requests
-from stem import Signal
-from stem.control import Controller
-import time
 from multiprocessing import Pool
 
 
@@ -12,7 +9,7 @@ headers = {
 
 proxies = {"http": "socks5://127.0.0.1:9050", "https": "socks5://127.0.0.1:9050"}
 
-print("first IP:", requests.get("https://ident.me", proxies=proxies).text)
+print("Your Public IP:", requests.get("https://ident.me").text)
 
 
 def send_request(url_list):
@@ -20,9 +17,11 @@ def send_request(url_list):
         html_content = requests.get(url, proxies=proxies, headers=headers).text
         print(url)
         print(
-            "IP:",
+            "IP rotated to:",
             requests.get("https://ident.me", proxies=proxies, headers=headers).text,
         )
+
+        # your html_content processing code goes here
 
 
 if __name__ == "__main__":
