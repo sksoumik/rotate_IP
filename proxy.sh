@@ -1,3 +1,3 @@
 set -e
 
-python /home/soumik/code/rotate_IP/change_IP.py & python /home/soumik/code/rotate_IP/send_request.py
+python3 "${PWD%/}/change_IP.py" & python3 "${PWD%/}/send_request.py"
