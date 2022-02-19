@@ -1,7 +1,7 @@
 # rotate_IP
 Rotate IP address periodically and send requests with changed IP addresses. 
 
-Program is tested on Ubuntu 20.04.3 LTS
+Program is tested on Ubuntu 20.04.3 LTS.
 
 ### install tor browser and modify torrc:
 ```
@@ -46,3 +46,4 @@ chmod +x proxy.sh
 This will send the `change_IP.py` in the background and will keep running with your `send_request.py` program.
 
 
+##### This program might not work on windows but you can try, but with replacing the `pwd` to `cd` in the `proxy.sh` file. 
