@@ -1,8 +1,6 @@
 # Rotate IP address
 Rotate IP address and send each requests with a different IP address using Python3
 
-*Program is tested on Ubuntu 20.04.3 LTS.*
-
 ### Install tor browser and modify torrc:
 ```bash
 sudo add-apt-repository ppa:micahflee/ppa
@@ -30,7 +28,7 @@ This will generate a new `HashedControlPassword`, replace the torrc's  `HashedCo
 and remember which password you passed with `tor --hash-password <password>` command. You will use the `<password>` in your python
 code. 
 
-Now, replace `welcome` with your `<password>` in the following line of `change_IP.py` in line 10:
+Now, replace `welcome` with your `<password>` in the following line of `change_IP.py` in line 21:
 
 ```bash
 controller.authenticate(password="welcome")
@@ -50,11 +48,7 @@ pip install requests
 
 ### Run the program
 ```bash
-chmod +x proxy.sh
-./proxy.sh
+python3 send_request.py
 ```
-This will send the `change_IP.py` in the background and will keep running with your `send_request.py` program.
-
-
-
-> ###### This program might not work on windows but you can try, but after replacing the `pwd` with `cd` in the `proxy.sh` file. 
+---
+*Program is tested on Ubuntu 20.04.3 LTS.*
