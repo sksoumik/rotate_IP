@@ -10,7 +10,7 @@ Now, you should have a torrc file in your `/etc/tor/` directory.
 
 ##### Edit `torrc` file in your `/etc/tor/` directory
 
-open the torrc file `$ nano torrc` and uncomment the following lines (usually these are commented out):
+open the torrc file `$ sudo nano torrc` and uncomment the following lines (usually these are commented out):
 
 ```bash
 ControlPort 9051
